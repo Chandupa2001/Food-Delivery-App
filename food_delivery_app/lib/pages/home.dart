@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/pages/details.dart';
 import 'package:food_delivery_app/widget/widget_support.dart';
 
 class Home extends StatefulWidget {
@@ -63,44 +64,51 @@ class _HomeState extends State<Home> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.all(5),
-                    child: Material(
-                      color: Colors.white,
-                      elevation: 5.0,
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        padding: const EdgeInsets.all(15),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                                borderRadius: BorderRadius.circular(100),
-                                child: Image.asset(
-                                  "images/salad1.jpg",
-                                  height: 150,
-                                  width: 150,
-                                  fit: BoxFit.cover,
-                                )),
-                            Text(
-                              "Greek Salad",
-                              style: AppWidget.semiBoldTextFieldStyle(),
-                            ),
-                            const SizedBox(
-                              height: 5.0,
-                            ),
-                            Image.asset(
-                              "images/rating_starts.png",
-                              width: 100,
-                            ),
-                            const SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              "Rs. 800",
-                              style: AppWidget.semiBoldTextFieldStyle(),
-                            )
-                          ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context)=> const Details())
+                      );
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.all(5),
+                      child: Material(
+                        color: Colors.white,
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          padding: const EdgeInsets.all(15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                  borderRadius: BorderRadius.circular(100),
+                                  child: Image.asset(
+                                    "images/salad1.jpg",
+                                    height: 150,
+                                    width: 150,
+                                    fit: BoxFit.cover,
+                                  )),
+                              Text(
+                                "Greek Salad",
+                                style: AppWidget.semiBoldTextFieldStyle(),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Image.asset(
+                                "images/rating_starts.png",
+                                width: 100,
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                "Rs. 800",
+                                style: AppWidget.semiBoldTextFieldStyle(),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
