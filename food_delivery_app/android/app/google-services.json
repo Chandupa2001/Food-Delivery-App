@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "514387653032",
+    "project_id": "fir-auth-a45f1",
+    "storage_bucket": "fir-auth-a45f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514387653032:android:63cb5c568920d18c86ad9d",
+        "android_client_info": {
+          "package_name": "com.example.food_delivery_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSXgwkuT42ugfQEWul9i8iDmo6OqJDpFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514387653032:android:93e3fb629f9c660e86ad9d",
+        "android_client_info": {
+          "package_name": "com.example.pizza_shop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSXgwkuT42ugfQEWul9i8iDmo6OqJDpFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

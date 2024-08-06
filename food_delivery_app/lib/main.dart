@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/pages/bottomNav.dart';
 import 'package:food_delivery_app/pages/login.dart';
@@ -5,7 +6,9 @@ import 'package:food_delivery_app/pages/onboard.dart';
 import 'package:food_delivery_app/pages/signup.dart';
 //import 'package:food_delivery_app/pages/home.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

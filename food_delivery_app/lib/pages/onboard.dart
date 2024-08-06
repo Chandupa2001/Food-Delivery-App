@@ -98,9 +98,9 @@ class _OnboardState extends State<Onboard> {
               height: 60,
               margin: const EdgeInsets.all(40),
               width: double.infinity,
-              child: const Center(
+              child: Center(
                 child: Text(
-                  "Next",
+                  currentIndex == contents.length - 1?"Start":"Next",
                   style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
