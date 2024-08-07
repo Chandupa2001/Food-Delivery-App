@@ -119,6 +119,7 @@ class _LogInState extends State<LogIn> {
                                   if (value==null || value.isEmpty) {
                                     return'Please Enter Email';
                                   }
+                                  return null;
                                 },
                                 decoration: InputDecoration(
                                     hintText: 'Email',
@@ -134,6 +135,7 @@ class _LogInState extends State<LogIn> {
                                   if (value==null || value.isEmpty) {
                                     return'Please Enter Password';
                                   }
+                                  return null;
                                 },
                                 obscureText: true,
                                 decoration: InputDecoration(
