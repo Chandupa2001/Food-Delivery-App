@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/pages/bottomNav.dart';
+import 'package:food_delivery_app/pages/forgotpassword.dart';
 import 'package:food_delivery_app/pages/signup.dart';
 import 'package:food_delivery_app/widget/widget_support.dart';
 
@@ -118,6 +119,7 @@ class _LogInState extends State<LogIn> {
                                   if (value==null || value.isEmpty) {
                                     return'Please Enter Email';
                                   }
+                                  return null;
                                 },
                                 decoration: InputDecoration(
                                     hintText: 'Email',
@@ -133,6 +135,7 @@ class _LogInState extends State<LogIn> {
                                   if (value==null || value.isEmpty) {
                                     return'Please Enter Password';
                                   }
+                                  return null;
                                 },
                                 obscureText: true,
                                 decoration: InputDecoration(
@@ -144,12 +147,17 @@ class _LogInState extends State<LogIn> {
                               const SizedBox(
                                 height: 20.0,
                               ),
-                              Container(
-                                  alignment: Alignment.topRight,
-                                  child: Text(
-                                    "Forgot Password?",
-                                    style: AppWidget.semiBoldTextFieldStyle(),
-                                  )),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgotPassword(),));
+                                },
+                                child: Container(
+                                    alignment: Alignment.topRight,
+                                    child: Text(
+                                      "Forgot Password?",
+                                      style: AppWidget.semiBoldTextFieldStyle(),
+                                    )),
+                              ),
                               const SizedBox(
                                 height: 50.0,
                               ),
