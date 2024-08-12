@@ -1,6 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/admin/admin_login.dart';
+import 'package:food_delivery_app/admin/home_admin.dart';
 import 'package:food_delivery_app/pages/onboard.dart';
+import 'package:food_delivery_app/pages/signup.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,7 +39,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Onboard()
+      home: const HomeAdmin()
     );
   }
 }
